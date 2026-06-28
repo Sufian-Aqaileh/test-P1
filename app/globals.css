@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #10243a;
+  font-family: var(--font-cairo), Tajawal, Arial, sans-serif;
+}
+
+body::selection {
+  background: #1ca9e1;
+  color: #ffffff;
+}
+
+.input {
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid #dbe7ee;
+  background: #f8fbfd;
+  padding: 0.95rem 1rem;
+  color: #10243a;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.input:focus {
+  border-color: #1ca9e1;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(28, 169, 225, 0.13);
+}
+
+.medical-grid {
+  background-image:
+    linear-gradient(rgba(14, 94, 138, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 94, 138, 0.06) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.location-stage {
+  min-height: calc(100vh - 82px);
+  background:
+    radial-gradient(circle at 54% 26%, rgba(216, 196, 145, 0.12), transparent 22%),
+    radial-gradient(circle at 20% 80%, rgba(28, 169, 225, 0.12), transparent 24%),
+    linear-gradient(180deg, #070604 0%, #0b0a09 58%, #071116 100%);
+}
+
+.premium-map {
+  background:
+    radial-gradient(circle at 55% 35%, rgba(216, 196, 145, 0.12), transparent 18%),
+    radial-gradient(circle at 63% 42%, rgba(28, 169, 225, 0.18), transparent 10%),
+    linear-gradient(180deg, #090807, #0d0b09 48%, #070707);
+}
+
+.premium-map::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.92), transparent 14%, transparent 86%, rgba(0, 0, 0, 0.92)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 18%, transparent 82%, rgba(0, 0, 0, 0.82));
+  pointer-events: none;
+}
+
+.map-world {
+  filter: drop-shadow(0 0 20px rgba(216, 196, 145, 0.06));
+}
+
+.continent {
+  position: absolute;
+  display: block;
+  background-image: radial-gradient(circle, rgba(216, 196, 145, 0.72) 1.25px, transparent 1.65px);
+  background-size: 9px 9px;
+  opacity: 0.82;
+  transform: rotate(-3deg);
+}
+
+.continent-america {
+  left: 2%;
+  top: 12%;
+  width: 31%;
+  height: 62%;
+  clip-path: polygon(14% 2%, 58% 5%, 78% 17%, 70% 33%, 88% 45%, 64% 60%, 58% 82%, 38% 96%, 24% 73%, 6% 62%, 18% 41%, 0 28%);
+}
+
+.continent-europe {
+  left: 39%;
+  top: 15%;
+  width: 18%;
+  height: 25%;
+  clip-path: polygon(8% 26%, 34% 4%, 70% 12%, 97% 34%, 78% 62%, 42% 78%, 10% 61%);
+}
+
+.continent-africa {
+  left: 43%;
+  top: 32%;
+  width: 22%;
+  height: 48%;
+  clip-path: polygon(20% 0, 73% 7%, 93% 38%, 70% 83%, 46% 100%, 18% 74%, 4% 33%);
+}
+
+.continent-asia {
+  left: 54%;
+  top: 12%;
+  width: 43%;
+  height: 55%;
+  clip-path: polygon(0 18%, 22% 3%, 62% 6%, 99% 26%, 86% 52%, 64% 48%, 57% 77%, 31% 92%, 16% 66%, 4% 55%);
+}
+
+.continent-australia {
+  left: 73%;
+  top: 66%;
+  width: 18%;
+  height: 18%;
+  clip-path: polygon(10% 36%, 38% 10%, 82% 25%, 94% 60%, 62% 84%, 24% 75%);
+}
